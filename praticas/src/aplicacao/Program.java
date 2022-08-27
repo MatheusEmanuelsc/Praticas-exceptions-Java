@@ -29,7 +29,7 @@ public class Program {
 			System.out.println("Quanto Vocẽ Deseja sacar?");
 			banco.saqueDaConta(entradaDeDados.nextDouble());
 			
-			entradaDeDados.close();
+			
 			
 			System.out.println(banco);
 			
@@ -40,6 +40,8 @@ public class Program {
 		}
 		catch (Exception e) {
 			System.out.println("Erro na operação: "+e.getMessage());
+		}finally {
+			entradaDeDados.close();
 		}
 	}
 }
